@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Your Company Name</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles.css" rel="stylesheet">
+    <!-- Link to CSS file -->
+    <link href="stylesLanding.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -15,12 +16,14 @@
             </div>
             <nav>
                 <ul>
+                    <!-- Navigation links -->
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#" class="button">Sign In</a></li>
-                    <li><a href="#" class="button">Sign Up</a></li>
+                    <!-- Sign In and Sign Up Buttons -->
+                    <li><a href="#" id="signInBtn" class="button">Sign In</a></li>
+                    <li><a href="createAccountPage.html" class="button">Sign Up</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +41,7 @@
     <!-- Introduction Section -->
     <section class="introduction">
         <div class="container">
-            <h2>Welcome to [Your Company Name]</h2>
+            <h2>Welcome to Your Company Name</h2>
             <p>We offer a wide range of services to meet all your needs. Our team of professionals is dedicated to providing top-notch services anytime, anywhere.</p>
         </div>
     </section>
@@ -118,5 +121,25 @@
             <p class="copyright">&copy; 2023 Your Company Name. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-button">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="submit-button">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
