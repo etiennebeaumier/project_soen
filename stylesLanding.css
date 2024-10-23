@@ -387,10 +387,6 @@ input[name="search"] {
   margin: 10px 0;
 }
 
-.product-price {
-  font-weight: bold;
-  margin: 0;
-}
 /* Responsive Styles */
 @media (max-width: 768px) {
     nav {
