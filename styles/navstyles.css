@@ -46,7 +46,7 @@ header {
 
 /* Sidebar styling */
 .sidebar {
-    width: 200px;
+    width: 25%;
     background-color: #222;
     padding: 20px;
 }
@@ -69,8 +69,8 @@ header {
 
 .sidebar ul li a:hover {
     background-color: #444;
-    padding-left: 10px;
-    transition: padding-left 0.3s;
+    padding-left: 20px;
+    transition: padding-left 0.5s;
 }
 
 /* Submenu dropdowns */
