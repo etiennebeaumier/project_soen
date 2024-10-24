@@ -117,3 +117,24 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
+
+
+/* Hide all submenus by default */
+.sidebar ul .submenu {
+    display: none;
+}
+
+/* Show submenu on hover */
+.sidebar ul li:hover > .submenu {
+    display: block;
+}
+
+/* Always display the submenu under 'Support' */
+.sidebar ul li.selected > .submenu {
+    display: block;
+}
+
+/* Make 'Tickets' bold */
+.sidebar ul li.selected .submenu a {
+    font-weight: bold;
+}
