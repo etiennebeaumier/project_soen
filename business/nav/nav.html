@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="navstyles.css">
+</head>
+<body>
+    <!-- Top navigation with logo and logout -->
+    <header>
+        <div class="logo">YourLogo</div>
+        <div class="logout"><a href="#">Log Out</a></div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar with categories and dropdown menus -->
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">Business Info</a>
+                    <ul class="submenu">
+                        <li><a href="#">Manage Profile</a></li>
+                        <li><a href="#">Clients View</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                    <ul class="submenu">
+                        <li><a href="#">Manage services</a></li>
+                        <li><a href="#">Purchase service view</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Clients</a>
+                    <ul class="submenu">
+                        <li><a href="#">View clients</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Support</a>
+                    <ul class="submenu">
+                        <li><a href="#">Tickets</a></li>
+                    </ul>
+                </li>
+        </aside>
+
+        <!-- Main content area -->
+        <section class="content">
+            <h2>Dashboard Overview</h2>
+            <p>Welcome to the generic dashboard. This area displays the main content of the page.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item 1</td>
+                        <td>Description of Item 1</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td>
+                        <td>Description of Item 2</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
