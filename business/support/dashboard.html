@@ -1,14 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script src="index.js"></script>
-  </body>
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="../styles/navstyles.css">
+    <!-- Inline CSS for demonstration purposes -->
+    <style>
+        /* Make all submenus hidden by default */
+        .sidebar ul .submenu {
+            display: none;
+        }
+
+        /* Show submenu on hover */
+        .sidebar ul li:hover > .submenu {
+            display: block;
+        }
+
+        /* Always display the submenu under 'Support' */
+        .sidebar ul li.selected > .submenu {
+            display: block;
+        }
+
+        /* Make 'Tickets' bold */
+        .sidebar ul li.selected .submenu a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top navigation with logo and logout -->
+    <header>
+        <div class="logo">YourLogo</div>
+        <div class="logout"><a href="../business/clients/login.html">Log Out</a></div>
+    </header> 
+
+    <div class="main-container">
+        <!-- Sidebar with categories and dropdown menus -->
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">Business Info</a>
+                    <ul class="submenu">
+                        <li><a href="#">Manage Profile</a></li>
+                        <li><a href="#">Clients View</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                    <ul class="submenu">
+                        <li><a href="#">Manage Services</a></li>
+                        <li><a href="#">Purchased Service View</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Clients</a>
+                    <ul class="submenu">
+                        <li><a href="#">View Clients</a></li>
+                    </ul>
+                </li>
+                <!-- Add the 'selected' class to the Support menu item -->
+                <li class="selected">
+                    <a href="#">Support</a>
+                    <ul class="submenu">
+                        <!-- 'Tickets' will be displayed in bold -->
+                        <li><a href="#">Tickets</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main content area -->
+        <section class="content"></section>
+    </div>
+</body>
 </html>
