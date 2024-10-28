@@ -5,22 +5,23 @@
 ## Client side
 
 ### Pages
-- [] landing page
-- [] about us
-- [] contact us
-    - [] request help (ie open a support ticket)
-- [] services
-- [] sign in
-    - [] sign up (html form)
-- [] client dashboard (includes preview of all subpages)
-    - [] manage services 
+- [ ]  landing page
+- [ ]  about us
+- [ ]  contact us
+    - [ ]  request help (ie open a support ticket)
+- [ ]  services
+- [ ]  sign in
+    - [ ]  sign up (html form)
+- [ ] client dashboard (includes preview of all subpages)
+    - [ ]  manage services 
         - *(splitting of subscriptions and one-time services optional, time-permitting)*
-        - [] subscriptions
-        - [] one-time services
-    - [] manage account
-        - [] manage payment 
+        - [ ] subscriptions
+        - [ ] one-time services
+    - [ ]  manage account
+        - [ ]  manage payment 
             *(could include actual payment service in final deliverable? otherwise just basic html form)*
-    - [] view bills
+    - [ ] view bills
+    - [ ] wishlist
 - [] ... 
 
 #### (specific page)
