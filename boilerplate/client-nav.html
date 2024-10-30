@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Page</title>
+  <link rel="stylesheet" href="navstyles.css">
+  <!-- Inline CSS for demonstration purposes -->
+  <style>
+    /* Make all submenus hidden by default */
+    .sidebar ul .submenu {
+      display: none;
+    }
+
+    /* Show submenu on hover */
+    .sidebar ul li:hover>.submenu {
+      display: block;
+    }
+
+    /* Always display the submenu under 'Business info' */
+    .sidebar ul li.selected>.submenu {
+      display: block;
+    }
+
+    /* Reset font-weight for all submenu links under the selected menu item */
+    .sidebar ul li.selected .submenu li a {
+      font-weight: normal;
+    }
+
+    /* Make only 'View Clients' bold */
+    .sidebar ul li.selected .submenu li:nth-child(1) a {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top navigation with logo and logout -->
+  <header>
+    <div class="logo">YourLogo</div>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="logout"><a href="clients/login.html">Log Out</a></div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar with categories and dropdown menus -->
+    <aside class="sidebar">
+      <ul>
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="service_main.html">Service</a>
+        </li>
+        <li>
+          <p>Options<p>
+          <ul class="submenu">
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Bills</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li>
+          <p>Support<p>
+          <ul class="submenu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <section class="content"></section>
+  </div>
+</body>
+
+</html>
