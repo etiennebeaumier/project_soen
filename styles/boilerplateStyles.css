@@ -23,9 +23,20 @@ header {
     padding: 10px 20px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.business-name {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 24px; /* Adjust font size as needed */
+  }
+
+.power-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+.logo img{
+    height: 50px;
 }
 
 .logout a {
@@ -145,7 +156,7 @@ th {
 /* Footer */
 footer {
     background: #333;
-    color: #fff;
+    color: #ffffff;
     padding: 40px 0;
 }
 
@@ -167,7 +178,7 @@ footer {
 .footer-column p,
 .footer-column ul,
 .footer-column li {
-    color: #ccc;
+    color: #ffffff;
     list-style: none;
 }
 
@@ -182,6 +193,8 @@ footer {
 
 .social-media {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-media li {
@@ -202,3 +215,42 @@ footer p.copyright {
     margin-top: 20px;
     font-size: 14px;
 }
+
+    .sidebar ul .submenu {
+      display: none;
+    }
+
+    /* Show submenu on hover */
+    .sidebar ul li:hover>.submenu {
+      display: block;
+    }
+
+    /* Always display the submenu under 'Business info' */
+    .sidebar ul li.selected>.submenu {
+      display: block;
+    }
+
+    /* Reset font-weight for all submenu links under the selected menu item */
+    .sidebar ul li.selected .submenu li a {
+      font-weight: normal;
+    }
+
+    /* Make only 'View Clients' bold */
+    .sidebar ul li.selected .submenu li:nth-child(1) a {
+      font-weight: bold;
+    }
+
+    /* Ensure the body takes up enough space to require scrolling */
+    body {
+      min-height: 200vh; /* Adjust this value as needed */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #241f1f;
+      padding: 10px;
+      text-align: center;
+    }
