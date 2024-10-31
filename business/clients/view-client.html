@@ -30,30 +30,30 @@
     <aside class="sidebar">
       <ul>
         <li>
-          <a href="#">Business Info</a>
+          <a href="../clients/businessInfo.html">Business Info</a>
           <ul class="submenu">
-            <li><a href="#">Manage Profile</a></li>
+            <li><a href="../clients/businessInfo.html">Manage Profile</a></li>
             <li><a href="#">Clients View</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Service</a>
+          <a href="../services/manage-services/create-service.html">Service</a>
           <ul class="submenu">
-            <li><a href="#">Manage Services</a></li>
+            <li><a href="../services/manage-services/create-service.html">Manage Services</a></li>
             <li><a href="#">Purchased Service View</a></li>
           </ul>
         </li>
         <li class="selected">
-          <a href="#">Clients</a>
+          <a href="view-client.html">Clients</a>
           <ul class="submenu">
-            <li><a href="#">View Clients</a></li>
+            <li><a href="view-client.html">View Clients</a></li>
           </ul>
         </li>
         <!-- Add the 'selected' class to the Support menu item -->
-        <li>
-          <a href="#">Support</a>
+        <li class="">
+          <a href="../support/dashboard.html">Support</a>
           <ul class="submenu">
-            <li><a href="#">Tickets</a></li>
+            <li><a href="../support/dashboard.html">Tickets</a></li>
           </ul>
         </li>
       </ul>
@@ -83,7 +83,12 @@
               <td>001</td>
               <td>John Doe</td>
               <td>Web Development</td>
-              <td>Pending</td>
+              <td><select>
+                <option value="unpaid">Unpaid</option>
+                <option value="pending" selected>Pending</option>
+                <option value="paid">Paid</option>
+              </select>
+            </td>
             </tr>
             <!-- Add more rows as needed -->
           </tbody>

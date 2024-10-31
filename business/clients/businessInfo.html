@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navigation Page</title>
   <link rel="stylesheet" href="../../styles/boilerplateStyles.css">
+  <link rel="stylesheet" href="../clients/clientsStyles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   
@@ -29,30 +30,30 @@
     <aside class="sidebar">
       <ul>
         <li class="selected">
-          <a href="#">Business Info</a>
+          <a href="businessInfo.html">Business Info</a>
           <ul class="submenu">
-            <li><a href="#">Manage Profile</a></li>
+            <li><a href="businessInfo.html">Manage Profile</a></li>
             <li><a href="#">Clients View</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Service</a>
+          <a href="../services/manage-services/create-service.html">Service</a>
           <ul class="submenu">
-            <li><a href="#">Manage Services</a></li>
+            <li><a href="../services/manage-services/create-service.html">Manage Services</a></li>
             <li><a href="#">Purchased Service View</a></li>
           </ul>
         </li>
         <li class="Clients">
-          <a href="#">Clients</a>
+          <a href="view-client.html">Clients</a>
           <ul class="submenu">
-            <li><a href="#">View Clients</a></li>
+            <li><a href="view-client.html">View Clients</a></li>
           </ul>
         </li>
         <!-- Add the 'selected' class to the Support menu item -->
         <li>
-          <a href="#">Support</a>
+          <a href="../support/dashboard.html">Support</a>
           <ul class="submenu">
-            <li><a href="#">Tickets</a></li>
+            <li><a href="../support/dashboard.html">Tickets</a></li>
           </ul>
         </li>
       </ul>
@@ -62,22 +63,22 @@
     <section class="content">
       <h2>Business Information</h2>
       <div class="business-info">
-        <div class="business-logo">
-          <img src="business-logo.png" alt="Business Logo">
-        </div>
-        <div class="business-details">
-          <h3>Business Name: [Business Name]</h3>
-          <p><strong>Description:</strong> [Current Description]</p>
-          <h4>Services Offered:</h4>
-          <ul>
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
-            <!-- Add more services as needed -->
-          </ul>
-        </div>
+          <div class="business-logo">
+              <img src="business-logo.png" alt="Business Logo">
+          </div>
+          <div class="business-details">
+              <h3>Business Name: <span>[Business Name]</span></h3>
+              <p><strong>Description:</strong> [Current Description]</p>
+              <h4>Services Offered:</h4>
+              <ul>
+                  <li>Service 1</li>
+                  <li>Service 2</li>
+                  <li>Service 3</li>
+                  <!-- Add more services as needed -->
+              </ul>
+          </div>
       </div>
-    </section>
+  </section>
   </div>
 
 </body>
