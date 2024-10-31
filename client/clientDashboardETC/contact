@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Page</title>
+  <link rel="stylesheet" href="../styles/boilerplateStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  
+</head>
+<body>
+  <!-- Top navigation with logo and logout -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="logout">
+      <a href="clients/login.html">
+        <i class="fas fa-power-off"></i> Log Out
+      </a>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar with categories and dropdown menus -->
+    <aside class="sidebar">
+      <ul>
+        <li>
+          <a href="../client/clientDashboardETC/customerDashboad.html">Dashboard</a>
+        </li>
+        <li>
+          <a href="../client/service_main.html">Service</a>
+        </li>
+        <li>
+          <p>Options<p>
+          <ul class="submenu">
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Bills</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li>
+          <p>Support<p>
+          <ul class="submenu">
+            <li><a href="../client/clientDashboardETC/about.html">About Us</a></li>
+            <li><a href="../client/clientDashboardETC/contact.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <section class="content">
+        <div class="container">
+            <h1>Contact Us</h1>
+            </div>
+    </section>
+    <section class="content">
+        <div class="container">
+        <div>
+            <div>
+                <h3>Contact us through these options</h3>
+                <p>Email: info@yourcompany.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Main St, City, Country</p>
+            </div>
+            <br>
+            <div>
+                <p> <strong>You can also find us on these platforms</strong></p>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+    </section>
+  </div>
+
+</body>
+
+<footer>
+    <div class="container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@yourcompany.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Main St, City, Country</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2023 Your Company Name. All rights reserved.</p>
+    </div>
+  </footer>
+</html>
