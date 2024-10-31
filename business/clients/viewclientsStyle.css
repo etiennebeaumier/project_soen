@@ -1,0 +1,80 @@
+/* Styles for the content area */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the search client section */
+.search-client {
+    margin-bottom: 30px;
+}
+
+.search-client h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.search-client input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles for the client board */
+.client-board {
+    margin-top: 30px;
+}
+
+.client-board h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Styles for the table */
+.client-board table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.client-board table thead {
+    background-color: #007bff;
+    color: #000000;
+}
+
+.client-board table th,
+.client-board table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.client-board table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .search-client h2,
+    .client-board h2 {
+        font-size: 20px;
+    }
+
+    .search-client input[type="text"],
+    .client-board table th,
+    .client-board table td {
+        font-size: 14px;
+    }
+}
