@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navigation Page</title>
-  <link rel="stylesheet" href="../styles/boilerplateStyles.css">
+  <title>View and Manage services</title>
+  <link rel="stylesheet" href="../../../styles/boilerplateStyles.css">
+  <link rel="stylesheet" href="addaService.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   
@@ -29,37 +30,58 @@
     <aside class="sidebar">
       <ul>
         <li>
-          <a href="#">Business Info</a>
+          <a href="../../clients/businessInfo.html">Business Info</a>
           <ul class="submenu">
-            <li><a href="#">Manage Profile</a></li>
+            <li><a href="../../clients/businessInfo.html">Manage Profile</a></li>
             <li><a href="#">Clients View</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#">Service</a>
+        <li class="selected">
+          <a href="create-service.html">Service</a>
           <ul class="submenu">
-            <li><a href="#">Manage Services</a></li>
+            <li><a href="create-service.html">Manage Services</a></li>
             <li><a href="#">Purchased Service View</a></li>
           </ul>
         </li>
         <li class="Clients">
-          <a href="#">Clients</a>
+          <a href="../../clients/view-client.html">Clients</a>
           <ul class="submenu">
-            <li><a href="#">View Clients</a></li>
+            <li><a href="../../clients/view-client.html">View Clients</a></li>
           </ul>
         </li>
         <!-- Add the 'selected' class to the Support menu item -->
-        <li>
-          <a href="#">Support</a>
+        <li class="">
+          <a href="../../support/dashboard.html">Support</a>
           <ul class="submenu">
-            <li><a href="#">Tickets</a></li>
+            <li><a href="../../support/dashboard.html">Tickets</a></li>
           </ul>
         </li>
       </ul>
     </aside>
 
     <!-- Main content area -->
-    <section class="content"></section>
+    <div class="content">
+      <h2>Create a New Service</h2>
+      <form action="create-service.html" method="post" class="service-form">
+          <div class="form-group">
+          <label for="service-name">Service Name</label>
+          <input type="text" id="service-name" name="service-name" required>
+          </div>
+          <div class="form-group">
+          <label for="service-description">Service Description</label>
+          <textarea id="service-description" name="service-description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+          <label for="service-price">Service Price</label>
+          <input type="number" id="service-price" name="service-price" step="1" required>
+          </div>
+          <div class="form-group">
+          <label for="average-delivery-time">Average Delivery Time (days)</label>
+          <input type="number" id="average-delivery-time" name="average-delivery-time" required>
+          </div>
+          <button type="submit" class="submit-button">Create Service</button>
+      </form>
+  </div>
   </div>
 
 </body>
