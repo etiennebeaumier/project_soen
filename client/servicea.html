@@ -6,90 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Link to CSS file -->
     <link href="../styles/stylesLanding.css" rel="stylesheet">
+    <link href="../styles/stylesservicepage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="#">Your Logo</a>
-            </div>
-            <nav>
-                <ul>
-                    <!-- Navigation links -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li class="search-container">
-                        <form action="/action_page.php">
-                          <input type="text" placeholder="Search.." name="search">
-                          <button type="submit">Submit</button>
-                        </form>
-                    </li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Options<span class="glyphicon glyphicon-cog"></span></button>
-                        <div class="dropdown-content">
-                          <a href="#">Account</a>
-                          <a href="#">Services</a>
-                          <a href="#">Wishlist</a>
-                          <a href="#">Bills</a>
-                        </div>
-                      </div>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="logout">
+      <a href="clients/login.html">
+        <i class="fas fa-power-off"></i> Log Out
+      </a>
+    </div>
+  </header>
 
+  <div class="main-container">
+    <!-- Sidebar with categories and dropdown menus -->
+    <aside class="sidebar">
+      <ul>
+        <li>
+          <a href="service_main.html">Service</a>
+        </li>
+        <li>
+          <p>Options<p>
+          <ul class="submenu">
+            <<li><a href="../client/clientDashboardETC/customerDashboard.html">Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Bills</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li>
+          <p>Support<p>
+          <ul class="submenu">
+            <li><a href="../client/clientDashboardETC/about.html">About Us</a></li>
+            <li><a href="../client/clientDashboardETC/contact.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
 
-
-   
-
-    
     <!-- Hero Section -->
     <section class="hero">
-        <img src="#" alt="service_A" class="service_image">
+        <img src="../servicelogos/servicealogo.jpg" alt="service_A" class="service_image">
     </section>
     
     <section class="introduction">
-        <div class="container">
-            <p>Some kind of description Here.</p>
+        <div>
+            <p>Notepack is a service that allows anyone to make a spreadsheet or a checklist for anything</p>
             </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2>Subscription Options</h2>
-            <div class="service-items">
-                <div class="service-item">
-                    <a href="#" class="price-type"><strong>Monthly</strong></a>
-                    <p>5$ per month</p>
-                </div>
-                <div class="service-item">
-                    <a href="#" class="price-type"><strong>yearly</strong></a>
-                    <p>50$ per year</p>
-                </div>
-                <div class="service-item">
-                    <a href="#" class="price-type"><strong>Lifetime</strong></a>
-                    <p>150$</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="introduction">
-        <div class="container">
+        <div>
             <form action="/action_page.php">
             <input type="checkbox" id="Wishlist" name="service_A" value="service_A">
             <label for="service_A"> Wishlist</label><br>
         </form>
             </div>
     </section>
-
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div>
+            <h2>Subscription Options</h2>
+            <div class="service-items">
+                <div class="service-item">
+                    <a href="../client/service/serviceApaid.html" class="price-type"><strong>Free</strong></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
     <!-- Footer -->
     <footer>
         <div class="container">
