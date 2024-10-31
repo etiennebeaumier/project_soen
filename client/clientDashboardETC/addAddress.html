@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Address</title>
+    <link rel="stylesheet" href="../../styles/styleAddAddress.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Our Logo</h1>
+    </header>
+
+    <main>
+        <h2 style="text-align: center;">Add a New Address</h2>
+        <form class="address-form">
+            <div class="form-group">
+                <label for="country">Province/Territory</label>
+                <select id="country">
+                    <option>Quebec</option>
+                    <option>Alberta</option>
+                    <option>Ontario</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="postal-code">postal-code</label>
+                <input type="text" placeholder="X#X-#X#" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Street-Number">Street Number</label>
+                <input type="text" id="Street-Number" placeholder="Street Number" required>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="default-address"required>
+                <label for="default-address">Make this my default address</label>
+            </div>
+
+            <button type="button" id="saveAddressButton" class="submit-button">Save Address</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Footer content from the previous layout -->
+        </div>
+    </footer>
+    <script>
+        document.getElementById("saveAddressButton").addEventListener("click", function() {
+            window.location.href = "address.html";
+        });
+    </script>  
+</body>
+</html>
+
+
