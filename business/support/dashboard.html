@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Page</title>
-    <link rel="stylesheet" href="../styles/navstyles.css">
-    <!-- Inline CSS for demonstration purposes -->
-    <style>
-        /* Make all submenus hidden by default */
-        .sidebar ul .submenu {
-            display: none;
-        }
-
-        /* Show submenu on hover */
-        .sidebar ul li:hover > .submenu {
-            display: block;
-        }
-
-        /* Always display the submenu under 'Support' */
-        .sidebar ul li.selected > .submenu {
-            display: block;
-        }
-
-        /* Make 'Tickets' bold */
-        .sidebar ul li.selected .submenu a {
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Page</title>
+  <link rel="stylesheet" href="../../styles/boilerplateStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="supportStyles.css">
 </head>
+
 <body>
-    <!-- Top navigation with logo and logout -->
-    <header>
-        <div class="logo">YourLogo</div>
-        <div class="logout"><a href="../business/clients/login.html">Log Out</a></div>
-    </header> 
-
-    <div class="main-container">
-        <!-- Sidebar with categories and dropdown menus -->
-        <aside class="sidebar">
-            <ul>
-                <li>
-                    <a href="#">Business Info</a>
-                    <ul class="submenu">
-                        <li><a href="#">Manage Profile</a></li>
-                        <li><a href="#">Clients View</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Service</a>
-                    <ul class="submenu">
-                        <li><a href="#">Manage Services</a></li>
-                        <li><a href="#">Purchased Service View</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Clients</a>
-                    <ul class="submenu">
-                        <li><a href="#">View Clients</a></li>
-                    </ul>
-                </li>
-                <!-- Add the 'selected' class to the Support menu item -->
-                <li class="selected">
-                    <a href="#">Support</a>
-                    <ul class="submenu">
-                        <!-- 'Tickets' will be displayed in bold -->
-                        <li><a href="#">Tickets</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </aside>
-
-        <!-- Main content area -->
-        <section class="content"></section>
+  <!-- Top navigation with logo and logout -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
     </div>
+    <h1 class="business-name">[Business Name]</h1>
+    <div class="logout">
+      <a href="clients/login.html">
+        <i class="fas fa-power-off"></i> Log Out
+      </a>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar with categories and dropdown menus -->
+    <aside class="sidebar">
+      <ul>
+        <li>
+          <a href="#">Business Info</a>
+          <ul class="submenu">
+            <li><a href="#">Manage Profile</a></li>
+            <li><a href="#">Clients View</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Service</a>
+          <ul class="submenu">
+            <li><a href="#">Manage Services</a></li>
+            <li><a href="#">Purchased Service View</a></li>
+          </ul>
+        </li>
+        <li class="Clients">
+          <a href="#">Clients</a>
+          <ul class="submenu">
+            <li><a href="#">View Clients</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li class="selected">
+          <a href="#">Support</a>
+          <ul class="submenu">
+            <li><a href="#">Tickets</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <section class="content">
+      <h2>Support Ticket Details</h2>
+      <div class="ticket-container">
+        <section id="ticket-view">
+          <p><strong>Ticket Number:</strong> 12345</p>
+          <p><strong>Client Name:</strong> John Doe</p>
+          <p><strong>Category:</strong> Technical Support</p>
+          <p><strong>Description:</strong> Issue with logging into the account.</p>
+          <p><strong>Date Opened:</strong> 2023-10-01</p>
+          <p><strong>Date Closed:</strong> 2023-10-05</p>
+          <p><strong>Employee Responsible:</strong> Jane Smith</p>
+        </section>
+      </div>
+
+      <div class="ticket-container">
+        <section id="new-ticket">
+          <h2>Create New Support Ticket</h2>
+          <form class="new-ticket-form">
+            <label for="clientName">Client Name:</label>
+            <input type="text" id="clientName" name="clientName" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="technical">Technical Support</option>
+              <option value="billing">Billing</option>
+              <option value="general">General Inquiry</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+          </form>
+        </section>
+      </div>
+
+      <section id="tickets-section">
+        <h2>Your Tickets</h2>
+        <table id="tickets-table">
+          <thead>
+            <tr>
+              <th>Ticket Number</th>
+              <th>Status</th>
+              <th>Category</th>
+              <th>Date Opened</th>
+              <th>Date Closed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample data rows -->
+            <tr>
+              <td>001</td>
+              <td>Open</td>
+              <td>Technical Support</td>
+              <td>2023-10-12</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Closed</td>
+              <td>Billing</td>
+              <td>2023-10-10</td>
+              <td>2023-10-11</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: info@yourcompany.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+          <p>Address: 123 Main St, City, Country</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <ul class="social-media">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2023 Your Company Name. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
