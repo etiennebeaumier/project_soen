@@ -6,32 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Link to CSS file -->
     <link href="../styles/stylesLanding.css" rel="stylesheet">
+    <link herf="../styles/boilerplateStyles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="#">Your Logo</a>
-            </div>
-            <nav>
-                <ul>
-                    <!-- Navigation links -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <!-- Sign In and Sign Up Buttons -->
-                    <li><a href="#" id="signInBtn" class="button">Sign In</a></li>
-                    <li><a href="createAccountPage.html" class="button">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="logout">
+        <!-- Sign In and Sign Up Buttons -->
+        <a href="#" id="signInBtn" class="button">Sign In</a>
+        <a href="createAccountPage.html" class="button">Sign Up</a>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar with categories and dropdown menus -->
+    <aside class="sidebar">
+      <ul>
+        <li>
+          <a href="service_main.html">Service</a>
+        </li>
+        <li>
+          <p>Options<p>
+          <ul class="submenu">
+            <<li><a href="../client/clientDashboardETC/customerDashboard.html">Account</a></li>
+            <li><a href="../client/service/wishlist.html">Wishlist</a></li>
+            <li><a href="../client/service/bills.html">Bills</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li>
+          <p>Support<p>
+          <ul class="submenu">
+            <li><a href="../client/clientDashboardETC/about.html">About Us</a></li>
+            <li><a href="../client/clientDashboardETC/contact.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
+        <div>
             <h1>Quality Services, Anytime, Anywhere</h1>
             <p>Your one-stop solution for all service needs.</p>
             <a href="chooseAccount.html" class="cta-button">Get Started</a>
@@ -40,31 +64,31 @@
 
     <!-- Introduction Section -->
     <section class="introduction">
-        <div class="container">
-            <h2>Welcome to Your Company Name</h2>
+        <div>
+            <h2>Welcome to Ctrl + F</h2>
             <p>We offer a wide range of services to meet all your needs. Our team of professionals is dedicated to providing top-notch services anytime, anywhere.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
-        <div class="container">
+        <div>
             <h2>Popular Services</h2>
             <div class="service-items">
                 <div class="service-item">
-                    <img src="service1.jpg" alt="Service 1">
-                    <h3>Service One</h3>
-                    <p>Short description of Service One.</p>
+                    <img src="../servicelogos/servicealogo.jpg" alt="Service 1">
+                    <h3>Notepack</h3>
+                    <p>Notes for everyone!</p>
                 </div>
                 <div class="service-item">
-                    <img src="service2.jpg" alt="Service 2">
-                    <h3>Service Two</h3>
-                    <p>Short description of Service Two.</p>
+                    <img src="../servicelogos/serviceblogo.jpg" alt="Service 2">
+                    <h3>Is This Charity Legit?</h3>
+                    <p>Find the best way for your money to help.</p>
                 </div>
                 <div class="service-item">
-                    <img src="service3.jpg" alt="Service 3">
-                    <h3>Service Three</h3>
-                    <p>Short description of Service Three.</p>
+                    <img src="../servicelogos/serviceclogo.jpg" alt="Service 3">
+                    <h3>Contract Timer</h3>
+                    <p>Never forget a subscription again!</p>
                 </div>
             </div>
         </div>
@@ -72,7 +96,7 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="container">
+        <div>
             <h2>What Our Customers Say</h2>
             <div class="testimonial-items">
                 <div class="testimonial-item">
@@ -90,7 +114,7 @@
             </div>
         </div>
     </section>
-
+</div>
     <!-- Footer -->
     <footer>
         <div class="container">
