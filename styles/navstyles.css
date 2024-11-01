@@ -62,7 +62,7 @@ header {
     margin-bottom: 20px;
 }
 
-.sidebar ul li a {
+.sidebar ul li a, .sidebar ul li p {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -70,7 +70,7 @@ header {
     padding: 5px 0;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover, .sidebar ul li p:hover {
     background-color: #444;
     padding-left: 20px;
     transition: padding-left 0.5s;
