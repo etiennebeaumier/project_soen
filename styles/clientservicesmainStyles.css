@@ -1,0 +1,38 @@
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    height: fit-content;
+    width: 2100px;
+  }
+  
+  .product-card {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+  }
+  
+  .product-card img {
+    width: 90%;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+  }
+  
+  .product-title {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+  }
+  
+  .product-description {
+    margin: 10px 0;
+  }
