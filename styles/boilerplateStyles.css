@@ -107,6 +107,14 @@ header {
     padding: 20px;
     background-color: #fff;
 }
+.content a{
+    font-size: 30px;
+    text-decoration: none;
+
+}
+.content p{
+    font-size: 25px;
+}
 
 .content h2 {
     margin-bottom: 20px;
