@@ -19,31 +19,22 @@
     </header>
 
     <main>
-        <h2>My Addresses</h2>
 
         <section class="address-list">
             <!-- Example address 1 -->
             <div class="address-item">
-                <h3>Home</h3>
-                <p>123 Main St, City, Province, Postal Code</p>
-                <p>Phone: +1 123-456-7890</p>
+                <h3>Current Address</h3>
+                <p><?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : 'No name provided'; ?></p> 
+                <p><?php echo isset($_GET['postalCode']) ? htmlspecialchars($_GET['postalCode']) : 'No name provided'; ?></p>
+                <p><?php echo isset($_GET['streetNumber']) ? htmlspecialchars($_GET['streetNumber']) : 'No name provided'; ?></p>
+                
                 <div class="address-actions">
                     <button class="edit-button">Edit</button>
                     <button class="delete-button">Delete</button>
                 </div>
             </div>
 
-            <!-- Example address 2 -->
-            <div class="address-item">
-                <h3>Office</h3>
-                <p>456 Work Ave, City, Province, Postal Code</p>
-                <p>Phone: +1 987-654-3210</p>
-                <div class="address-actions">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
-            </div>
-
+        
             <!-- Add New Address Button -->
             <button class="add-address-button" onclick="window.location.href='addAddress.html'">Add New Address</button>
         </section>

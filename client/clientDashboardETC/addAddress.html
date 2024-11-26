@@ -13,7 +13,7 @@
 
     <main>
         <h2 style="text-align: center;">Add a New Address</h2>
-        <form class="address-form">
+        <form class="address-form" action ="address.php" method="get">
             <div class="form-group">
                 <label for="country">Province/Territory</label>
                 <select id="country">
@@ -25,25 +25,25 @@
 
             <div class="form-group">
                 <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" placeholder="Full name" required>
+                <input type="text" id="full-name" placeholder="Full name" name ="name" required>
             </div>
 
             <div class="form-group">
                 <label for="postal-code">postal-code</label>
-                <input type="text" placeholder="X#X-#X#" required>
+                <input type="text" placeholder="X#X-#X#" name = 'postalCode' required>
             </div>
 
             <div class="form-group">
                 <label for="Street-Number">Street Number</label>
-                <input type="text" id="Street-Number" placeholder="Street Number" required>
+                <input type="text" id="Street-Number" placeholder="Street Number" name="streetNumber" required>
             </div>
 
             <div class="form-group checkbox">
-                <input type="checkbox" id="default-address"required>
+                <input type="checkbox" id="default-address" >
                 <label for="default-address">Make this my default address</label>
             </div>
 
-            <button type="button" id="saveAddressButton" class="submit-button">Save Address</button>
+            <a href = "address.php"><input type = 'submit' value = 'Save' class = 'submit-button'></a> 
 
         </form>
     </main>
@@ -53,11 +53,7 @@
             <!-- Footer content from the previous layout -->
         </div>
     </footer>
-    <script>
-        document.getElementById("saveAddressButton").addEventListener("click", function() {
-            window.location.href = "address.html";
-        });
-    </script>  
+
 </body>
 </html>
 
