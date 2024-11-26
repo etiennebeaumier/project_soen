@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navigation Page</title>
-  <link rel="stylesheet" href="../styles/boilerplateStyles.css">
+  <link rel="stylesheet" href="../../styles/boilerplateStyles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   
@@ -14,7 +14,7 @@
   <!-- Top navigation with logo and logout -->
   <header>
     <div class="logo">
-      <a href="../landingPage.html"><img src="logo.png" alt="Logo"></a>
+      <img src="logo.png" alt="Logo">
     </div>
     <div class="search-container">
       <form action="/action_page.php">
@@ -31,25 +31,28 @@
 
   <div class="main-container">
     <!-- Sidebar with categories and dropdown menus -->
-  <aside class="sidebar">
+    <aside class="sidebar">
       <ul>
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
         <li>
           <a href="service_main.html">Service</a>
         </li>
         <li>
           <p>Options<p>
           <ul class="submenu">
-            <<li><a href="../client/clientDashboardETC/customerDashboard.html">Account</a></li>
-            <li><a href="../client/service/wishlist.html">Wishlist</a></li>
-            <li><a href="../client/service/bills.html">Bills</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Bills</a></li>
           </ul>
         </li>
         <!-- Add the 'selected' class to the Support menu item -->
         <li>
           <p>Support<p>
           <ul class="submenu">
-            <li><a href="../client/clientDashboardETC/about.html">About Us</a></li>
-            <li><a href="../client/clientDashboardETC/contact.html">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </li>
       </ul>
@@ -99,7 +102,7 @@
                 </ul>
             </div>
         </div>
-        <p class="copyright">&copy; 2024 Your Company Name. All rights reserved.</p>
+        <p class="copyright">&copy; 2023 Your Company Name. All rights reserved.</p>
     </div>
   </footer>
 </html>

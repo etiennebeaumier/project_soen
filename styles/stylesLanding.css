@@ -14,10 +14,12 @@ body {
 
 /* Container */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
+
 
 /* Header */
 header {
@@ -31,6 +33,15 @@ header {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+    
+}
+.logo {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+    
 }
 
 nav {
@@ -87,15 +98,15 @@ nav ul li a.button:hover {
 
 /* Hero Section */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
+    
+    color: #000000;
     padding: 100px 0;
     text-align: center;
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .hero p {
@@ -105,7 +116,7 @@ nav ul li a.button:hover {
 
 /* Introduction Section */
 .introduction {
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -144,8 +155,8 @@ nav ul li a.button:hover {
 }
 
 .service-item img {
-    width: 100%;
-    height: auto;
+    width: 110%;
+    height: 350px;
     border-radius: 8px;
 }
 
@@ -160,7 +171,7 @@ nav ul li a.button:hover {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
