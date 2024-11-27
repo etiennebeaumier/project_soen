@@ -149,11 +149,13 @@ footer {
 .footer-column ul {
     list-style: none;
     padding: 0;
+    
 }
 
 .footer-column ul li {
     display: inline;
     margin-right: 10px;
+    list-style-type: none;
 }
 
 .footer-column ul li a {
