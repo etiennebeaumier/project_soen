@@ -106,6 +106,13 @@ header {
     flex: 1;
     padding: 20px;
     background-color: #fff;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    
+}
+.content ul{
+    list-style: none;
 }
 .content a{
     font-size: 30px;
