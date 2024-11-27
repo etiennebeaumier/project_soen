@@ -1,3 +1,54 @@
+<?php
+session_start();
+
+// Check if the business is logged in
+if (!isset($_SESSION['business_id'])) {
+    // Not logged in, redirect to login page
+    header('Location: login.html');
+    exit();
+}
+
+// Retrieve business ID from session
+$business_id = $_SESSION['business_id'];
+
+// Database connection parameters
+$servername = "localhost";
+$username = "root"; // Your MySQL username
+$password_db = "";  // Your MySQL password
+$dbname = "soen287_project"; // Your database name
+
+// Create a new MySQLi connection
+$conn = new mysqli($servername, $username, $password_db, $dbname);
+
+// Check for a connection error and handle it
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $nam = htmlspecialchars($_POST['business-name']);
+  $descriptio = htmlspecialchars($_POST['business-description']);
+  $logo_imag  = mysqli_real_escape_string($conn, $_FILES['business-logo']);
+  $query = mysqli_query($conn,"UPDATE Businesses SET name = $nam WHERE id=$business_id");
+  $query1 = mysqli_query($conn,"UPDATE Businesses SET description = descriptio WHERE id=$business_id");
+  $query2 = mysqli_query($conn,"UPDATE Businesses SET logo_image = $logo_imag WHERE id=$business_id");
+  $stmt = mysqli_prepare($conn, $query);
+  $stmt->bind_param("s", $nam);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+  $stmt = mysqli_prepare($conn, $query1);
+  $stmt->bind_param("s", $descriptio);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+  $stmt = mysqli_prepare($conn, $query2);
+  $stmt->bind_param("s", $logo_imag);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,35 +79,36 @@
   <div class="main-container">
     <!-- Sidebar with categories and dropdown menus -->
     <aside class="sidebar">
-            <ul>
-                <li>
-                    <p>Business Info</p>
-                    <ul class="submenu">
-                        <li><a href="business/profile/edit-appearance.html">Manage Profile</a></li>
-                        <li><a href="business/profile/edit-business-info.html">Edit</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <p>Service</p>
-                    <ul class="submenu">
-                        <li><a href="../bbusiness/services/manage-services/create-service.html">Create service</a></li>
-                        <li><a href="../business/services/manage-services/view.html">Manage services</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="../business/clients/view-client.html">Clients</a>
-                    <ul class="submenu">
-                        <li><a href="../business/clients/clientsview.html">Clients veiw</a></li>
-                        <li><a href="../business/clients/editClient.html">edit clients </a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="../business/support/supportdashboard.html">Support</a>
-                    <ul class="submenu">
-                        <li><a href="../support/view-tickets.html">Tickets</a></li>
-                    </ul>
-                </li>
-        </aside>
+      <ul>
+        <li class="selected">
+          <a href="clientsview.html">Business Info</a>
+          <ul class="submenu">
+            <li><a href="editClient.html">Manage Profile</a></li>
+            <li><a href="clientsview.html">Clients View</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../services/manage-services/create-service.html">Service</a>
+          <ul class="submenu">
+            <li><a href="../services/manage-services/create-service.html">Manage Services</a></li>
+            <li><a href="#">Purchased Service View</a></li>
+          </ul>
+        </li>
+        <li class="Clients">
+          <a href="view-client.html">Clients</a>
+          <ul class="submenu">
+            <li><a href="view-client.html">View Clients</a></li>
+          </ul>
+        </li>
+        <!-- Add the 'selected' class to the Support menu item -->
+        <li>
+          <a href="../support/dashboard.html">Support</a>
+          <ul class="submenu">
+            <li><a href="../support/supportdashboard.html">Tickets</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
 
     <!-- Main content area -->
     <section class="content">
