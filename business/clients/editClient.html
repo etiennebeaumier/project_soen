@@ -1,3 +1,54 @@
+<?php
+session_start();
+
+// Check if the business is logged in
+if (!isset($_SESSION['business_id'])) {
+    // Not logged in, redirect to login page
+    header('Location: login.html');
+    exit();
+}
+
+// Retrieve business ID from session
+$business_id = $_SESSION['business_id'];
+
+// Database connection parameters
+$servername = "localhost";
+$username = "root"; // Your MySQL username
+$password_db = "";  // Your MySQL password
+$dbname = "soen287_project"; // Your database name
+
+// Create a new MySQLi connection
+$conn = new mysqli($servername, $username, $password_db, $dbname);
+
+// Check for a connection error and handle it
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $nam = htmlspecialchars($_POST['business-name']);
+  $descriptio = htmlspecialchars($_POST['business-description']);
+  $logo_imag  = mysqli_real_escape_string($conn, $_FILES['business-logo']);
+  $query = mysqli_query($conn,"UPDATE Businesses SET name = $nam WHERE id=$business_id");
+  $query1 = mysqli_query($conn,"UPDATE Businesses SET description = descriptio WHERE id=$business_id");
+  $query2 = mysqli_query($conn,"UPDATE Businesses SET logo_image = $logo_imag WHERE id=$business_id");
+  $stmt = mysqli_prepare($conn, $query);
+  $stmt->bind_param("s", $nam);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+  $stmt = mysqli_prepare($conn, $query1);
+  $stmt->bind_param("s", $descriptio);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+  $stmt = mysqli_prepare($conn, $query2);
+  $stmt->bind_param("s", $logo_imag);
+  mysqli_stmt_execute($stmt);
+  $stmt->close();
+
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
