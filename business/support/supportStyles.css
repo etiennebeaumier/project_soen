@@ -1,0 +1,219 @@
+/* Ensure the page takes up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Use flexbox for layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area fills the available space */
+.main-container {
+    flex: 1;
+}
+
+/* Footer sticks to the bottom */
+footer {
+    background-color: #241f1f;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Styles for the content part of the support dashboard */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content .ticket-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .ticket-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.content .ticket-form input,
+.content .ticket-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content .ticket-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content .ticket-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the single ticket view container */
+.single-ticket-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Styles for the create ticket container */
+.create-ticket-container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Styles for the new ticket form */
+.new-ticket-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-ticket-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.new-ticket-form input,
+.new-ticket-form select,
+.new-ticket-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.new-ticket-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-ticket-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the ticket container */
+.ticket-container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Styles for the tickets table */
+#tickets-section {
+    margin-top: 40px;
+  }
+  
+  #tickets-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  #tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #tickets-table th,
+  #tickets-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  #tickets-table th {
+    background-color: #f2f2f2;
+  }
+  
+  #tickets-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #tickets-table,
+    #tickets-table thead,
+    #tickets-table tbody,
+    #tickets-table th,
+    #tickets-table td,
+    #tickets-table tr {
+      display: block;
+    }
+  
+    #tickets-table tr {
+      margin-bottom: 15px;
+    }
+  
+    #tickets-table td {
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    #tickets-table td::before {
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+    }
+  
+    #tickets-table td:nth-of-type(1)::before { content: "Ticket Number"; }
+    #tickets-table td:nth-of-type(2)::before { content: "Status"; }
+    #tickets-table td:nth-of-type(3)::before { content: "Category"; }
+    #tickets-table td:nth-of-type(4)::before { content: "Date Opened"; }
+    #tickets-table td:nth-of-type(5)::before { content: "Date Closed"; }
+  }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
