@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.services-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.services-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.service-header, .service-row {
+    display: contents;
+}
+
+.service-header div, .service-row div {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.service-header div {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.service-row:nth-child(even) div {
+    background-color: #f9f9f9;
+}
+
+.service-row:nth-child(odd) div {
+    background-color: #ffffff;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+}
+
+.average-delivery-time {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.add-service-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-service-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.add-service-button button:hover {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
