@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="../../styles/accountPage.css"> <!-- Link to the CSS file for styling -->
+</head>
+<body>
+    <header>
+         <a href = "../landingPage.html" id = "logo"><h1>Ctrl + F</h1></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for services">
+        </div>
+        <div class="shopping-cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <h2>My Account</h2>
+
+        <!-- Profile Information Section -->
+        <section class="account-section">
+            <h3>Profile Information</h3>
+            <div class="account-info">
+                <p><strong>Full Name:</strong> Karen Johnson</p>
+                <p><strong>Email:</strong> karen.johnson@example.com</p>
+                <button class="edit-button">Edit Profile</button>
+            </div>
+        </section>
+
+        <!-- Password Management Section -->
+        <section class="account-section">
+            <h3>Password Management</h3>
+            <div class="password-info">
+                <p><strong>Change Password</strong></p>
+                <button class="change-password-button">Change Password</button>
+            </div>
+        </section>
+
+        <!-- Account Settings Section -->
+        <section class="account-section">
+            <h3>Account Settings</h3>
+            <div class="settings-info">
+                <label for="notifications">Receive Notifications</label>
+                <input type="checkbox" id="notifications" checked>
+                <button class="save-settings-button">Save Settings</button>
+            </div>
+        </section>
+
+        <!-- Logout Button -->
+        <button class="logout-button">Log Out</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Footer content from the previous layout -->
+        </div>
+    </footer>
+    <script>
+        document.getElementById("EditProfile-button").addEventListener("click", function() {
+            window.location.href = "editAccountPages/changeProfileInformation.html";
+        });
+    </script> 
+    <script>
+        document.getElementById("CPB").addEventListener("click", function() {
+                window.location.href = "editAccountPages/cAPassword.html";
+        });
+    </script>
+    <script>
+        document.getElementById("SaveSettings").addEventListener("click", function() {
+            window.location.href = "customerDashboard.html";
+        });
+    </script>
+</body>
+</html>
