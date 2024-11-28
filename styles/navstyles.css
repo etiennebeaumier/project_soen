@@ -26,6 +26,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 .logout a {
@@ -158,6 +159,7 @@ footer {
 .footer-column {
     width: 30%;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .footer-column h3 {
