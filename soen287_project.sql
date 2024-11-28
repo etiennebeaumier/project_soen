@@ -106,10 +106,11 @@ ALTER TABLE `Businesses`
 --
 -- Indexes for table `Clients`
 --
+/*doesn't work because they already been done
 ALTER TABLE `Clients`
   ADD PRIMARY KEY (`client_id`),
   ADD UNIQUE KEY `email` (`email`);
-
+*/
 --
 -- Indexes for table `ClientServices`
 --
